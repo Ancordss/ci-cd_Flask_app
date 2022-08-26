@@ -1,12 +1,12 @@
-## projec 4 ci/cd python docker jenkins
+## Projec 4 ci/cd python docker jenkins
 
-### steps
+### Steps
 
-#### continuos integration
+#### Continuos integration
 -merge all code work into a master branch
 -code reviews, copile,build, unit tests,integration tests
 
-#### continuos delivery 
+#### Continuos delivery 
 -deploy to test Server (in this case azure vm)
     -UAT,QA
 -build are delivered throughout the life cycle
@@ -14,8 +14,8 @@
 #### Continuis Deployment 
 -deploy to prod sercer or release
 
-#### work job
-![image.png]()
+#### Work Job
+![](https://raw.githubusercontent.com/Ancordss/SimpleFlask_app/master/static/Screenshot%202022-08-26%20102511.png)
 
 in this case where deploy the image in the same machine where jenkins is running and if it is successful then it is going to publish it to the docker hub and then the next stage jenkins will actually deploy the image to the server
 
@@ -23,7 +23,7 @@ im trying to mimic o replicate the whole  flow of ci/cd here starting from check
 
 ##### in a usual ci/cd enverinmoment basically this is how the things work. in this case im trying mimic in a local systems.
 
-#### requeriments:
+#### Requeriments:
 - python3x. text editor or IDE
 - docker, dockerhub account
 - git, git bash or github Desktop
@@ -32,7 +32,7 @@ im trying to mimic o replicate the whole  flow of ci/cd here starting from check
 - linux server with docker installed (this will the deployment server).
 
 
-#### firs go an clone this repository
+#### Firs go an clone this repository
  - > https://github.com/Ancordss/SimpleFlask_app.git
 
  now we can check we have a simple flask app a Dockerfile and a jenkinsfile
@@ -44,7 +44,7 @@ im trying to mimic o replicate the whole  flow of ci/cd here starting from check
 - [Docker Pipeline](https://plugins.jenkins.io/docker-workflow/)
 - [SSH server](https://plugins.jenkins.io/sshd/)
 
-### configure your vm
+### Configure your vm
 for the jenkins vm we need have configurated and installed docker, jenkins and git
 you can go to this repository and run the scripts to automate the installation and configuration
 
@@ -52,7 +52,7 @@ you can go to this repository and run the scripts to automate the installation a
 
 after that continue with the next step
 
-### creating a vm in azure to deploy the project
+### Creating a vm in azure to deploy the project
 
 here need to have a azure account.
 
@@ -71,7 +71,7 @@ so we need to run this commands:
 - docker run hello-world
 ```
 
-#### create a new job pipeline
+#### Create a new job pipeline
 
 go to pipeline script 
 and copy and paste the code of jenkinsfile on it 
@@ -79,7 +79,21 @@ and copy and paste the code of jenkinsfile on it
 at this point you need change the code to your own repository of github, dockerhub and put your ip servers 
 click on save and now run if all was good you have finished.
 
-### some preview of this proyect 
+### Some preview of this proyect 
+
+#### jenkins 
+![](https://raw.githubusercontent.com/Ancordss/SimpleFlask_app/master/static/image2.png)
+
+#### dockerhub
+![](https://raw.githubusercontent.com/Ancordss/SimpleFlask_app/master/static/image_docker.png)
+
+#### docker ps
+![](https://raw.githubusercontent.com/Ancordss/SimpleFlask_app/master/static/image3.png)
+
+#### app running
+![](https://raw.githubusercontent.com/Ancordss/SimpleFlask_app/master/static/deploy.png)
+
+## BASED ON A PROJECT OF = [Kumar'S](https://www.youtube.com/c/KumarS1)
 
 
 
